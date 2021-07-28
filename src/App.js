@@ -5,7 +5,7 @@ const App = () =>{
         return (<>
         <Header />
         
-        <ItemListContainer />
+        <ItemListContainer greeting='Bienvenido' />
         </>)
 
         }

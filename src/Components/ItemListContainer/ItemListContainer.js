@@ -1,13 +1,13 @@
 import React from 'react';
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
 const [name, setName] = React.useState('')
 React.useEffect(() => {
 const enteredName = prompt('Ingrese su Nombre')
-setName(`Bienvenido ${enteredName}`)
+setName(`${enteredName}`)
 }, [])
 return(
 <div>
-    <div>{name}</div>
+    <div>{props.greeting} {name}</div>
 </div>
 )
 }
