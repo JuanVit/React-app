@@ -1,10 +1,13 @@
-import Header from "./Components/Header"
-import UserWelcome from "./Components/ItemListContainer";
+import Header from "./Components/Header/Header"
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 
-const App = () => 
+const App = () =>
+
         <>
         <Header />
-        <div UserWelcome>{`Bienvenido ${UserWelcome()}`}</div>
+        
+        <ItemListContainer Nombre/>
         </>
+
 
 export default App;

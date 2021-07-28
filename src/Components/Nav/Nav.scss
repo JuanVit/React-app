@@ -1,0 +1,60 @@
+.color1 {color: #130907;}
+.color2 {color: #183842;}
+.color3 {color: #f19671;}
+.color4 {color: #efcd6f;}
+.color5 {color: #f4eda9;}
+
+.navBar{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background: rgb(26,24,57);
+    background: linear-gradient(90deg, rgba(26,24,57,1) 0%, rgba(125,171,196,1) 100%);
+    justify-content: space-around;
+    align-items: center;
+    .logoContainer{
+        p{
+            width: 100%;
+            color:white;
+            padding: .5rem;
+            font-size: 1.5rem;
+            &:hover{
+                opacity: inherit;
+            }
+        }
+    }
+    .navMenu{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        .searchBar{
+            border:none;
+            padding-right:1rem ;
+            border-bottom: 1px solid black;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            &:focus{
+                outline: none;
+            }
+        }
+        p{
+            color:rgba($color: #ffffff, $alpha: 0.7);
+            padding: 1rem;
+            font-size: 1rem;
+            &:hover{
+            color: white ;
+            cursor: pointer;
+            }
+        }
+        i{
+            color:rgba($color: #ffffff, $alpha: 0.7);
+            font-size: 1.3rem;
+            padding: 1rem;
+            &:hover{
+                color: white ;
+                cursor: pointer;
+            }
+        }  
+    }
+}
