@@ -1,13 +1,12 @@
 import Header from "./Components/Header/Header"
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 
-const App = () =>
-
-        <>
+const App = () =>{
+        return (<>
         <Header />
         
-        <ItemListContainer Nombre/>
-        </>
+        <ItemListContainer />
+        </>)
 
-
+        }
 export default App;
