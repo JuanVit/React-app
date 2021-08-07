@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Item from '../ItemList/ItemList'
+import ItemList from '../ItemList/ItemList'
 
 // const ItemListContainer = (props) => {
 // const [name, setName] = React.useState('')
@@ -30,7 +30,6 @@ const ItemListContainer = () =>{
 
             setTimeout(() => {
             resolve(products);
-            console.log(products)
 
             }, 2000)
             
@@ -38,6 +37,7 @@ const ItemListContainer = () =>{
         promise.then((products) => setProducts(products));
     }, []);
 
+    console.log(products)
     return(
         <ItemList products={products}/>
     )

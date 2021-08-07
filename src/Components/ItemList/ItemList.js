@@ -1,11 +1,13 @@
+import Item from '../Item/Item'
 
-const Item = (products) => {
+const ItemList = (products) => {
     return(
-        <div>
-            
-        </div>
+    <div>
+        {products.map((product) => (
+            <Item  props={product}/>
+        ))}
+    </div>
     )
-    // products.map()
 }
 
-export default Item;
+export default ItemList;
