@@ -1,12 +1,15 @@
 import Item from '../Item/Item'
-
-const ItemList = (products) => {
+import './ItemList.css'
+const ItemList = ({products}) => {
+    
     return(
-    <div>
-        {products.map((product) => (
-            <Item  props={product}/>
-        ))}
-    </div>
+    <section className="item-list-container">
+            {products.map(product => {
+                return(
+                    <Item product={product} key={product.id}/>
+                )
+            })} 
+    </section>
     )
 }
 
