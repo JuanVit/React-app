@@ -1,5 +1,5 @@
 .detailBox {
-  width: 55%;
+  width: 50%;
   height: 60%;
   margin: 150px auto;
   display: -webkit-box;
@@ -13,5 +13,55 @@
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid black;
+}
+
+.detailBox .productDetailBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 0% auto;
+}
+
+.detailBox .productDetailBox .imgDetailContainer {
+  width: 60%;
+}
+
+.detailBox .productDetailBox .imgDetailContainer img {
+  width: 100%;
+  height: 400px;
+}
+
+.detailBox .productDetailBox .contentDetailContainer {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.detailBox .productDetailBox .contentDetailContainer p {
+  width: 50%;
+  margin: 10% auto;
+}
+
+.detailBox .productDetailBox .contentDetailContainer .priceDetail {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.detailBox .productDetailDescription {
+  width: 80%;
+  margin: 1% auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .detailBox {
+    width: 90%;
+    margin: 80px auto;
+  }
 }
 /*# sourceMappingURL=ItemDetail.css.map */

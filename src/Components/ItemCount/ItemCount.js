@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './ItemCount.css';
-const ItemCount = (props) =>{
+const ItemCount = ({stock, initial, onAdd}) =>{
 
-    const {stock, initial} = props;
     const [numberItem, setItem] = useState(initial);
 
     const sumar = () => {
@@ -21,12 +20,18 @@ const ItemCount = (props) =>{
             alert('Producto eliminado del carrito')
         }
     }
+        const confirmar = () =>{
+            if(stock > 0){
+                onAdd(numberItem)
+            }
+        }
 
     return(
         <div className='itemBtnContainer'>
             <button onClick={restar}>-</button>
             <p>{numberItem}</p>
             <button onClick ={sumar}>+</button>
+            <p onClick={confirmar}>Comprar</p>
         </div>    
     )
 }
