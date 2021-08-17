@@ -1,14 +1,23 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const ItemDetail = ({product}) => {
 
 
-const onAdd = (numberItem) => {
-        
-        console.log(`cantidad a comprar ${numberItem}`)
+
     
+const [amount, setAmount] =  useState(1);
+const [show, setShow] = useState(true);
+
+
+const onAdd = (cantidad) =>{
+    setAmount(cantidad);
+    setShow(false)
+
 }
+
                 return(
                 <section className='detailBox'>
                     <h2 className='detailTitle'>
@@ -25,7 +34,7 @@ const onAdd = (numberItem) => {
                             <p className='priceDetail'>
                                 Precio: $ {product.price}
                             </p>
-                            <ItemCount stock={product.stock} initial={product.stock>=1 ? 1 : 0} onAdd={onAdd}/>
+                            {show ? <ItemCount stock={product.stock} initial={product.stock>=1 ? 1 : 0} onAdd={onAdd}/> : <><p>Cantidad elegida {amount} </p><Link to='/Cart'><button>Finalizar compra</button></Link></>}
                         </div>
                     </div>
                     <p className='productDetailDescription'>
