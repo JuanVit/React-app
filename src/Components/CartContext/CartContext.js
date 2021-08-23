@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { findDOMNode } from "react-dom";
 
 export const context = createContext();
 
@@ -23,10 +24,10 @@ const CustomProvider = ({children}) => {
         setCart([])
     }
 
-    const isInCart = (productId) => {
-
+    const isInCart = (product) => {
+        
     }
-
+    
     const consumeContext = {cart, addProduct, removeProduct, clear}
 
     return(

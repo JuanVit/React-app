@@ -1,0 +1,11 @@
+.cartContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.cartContainer .cartList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=Cart.css.map */
