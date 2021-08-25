@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { findDOMNode } from "react-dom";
+
 
 export const context = createContext();
 
@@ -8,10 +8,15 @@ const {Consumer, Provider} = context;
 const CustomProvider = ({children}) => {
 
     const [cart, setCart] = useState([]);
-
+    
+    const isInCart = (id) => {
+        return cart.find(p => p.product.id === id)
+    }
+    
     const addProduct = (product) => {
-
-        setCart([...cart,product])
+        if (isInCart(product.product.id) == null){
+            return setCart([...cart,product])
+        }
     }
 
     const removeProduct = (product) =>{
@@ -24,9 +29,6 @@ const CustomProvider = ({children}) => {
         setCart([])
     }
 
-    const isInCart = (product) => {
-        
-    }
     
     const consumeContext = {cart, addProduct, removeProduct, clear}
 
