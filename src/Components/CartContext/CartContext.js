@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 
 export const context = createContext();
 
-const {Consumer, Provider} = context;
+const {Provider} = context;
 
 const CustomProvider = ({children}) => {
 

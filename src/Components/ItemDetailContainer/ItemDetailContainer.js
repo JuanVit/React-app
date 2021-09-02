@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router";
 import { firestore } from '../../Firebase';
-import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 // const productsArray = [
 //     {id:1, name:'Nike Revolution 5 Runinng De Hombre', img:'https://sporting.vteximg.com.br/arquivos/ids/202114-1000-1000/4BQ3204-002-00.jpg?v=637178231968030000', price: '10.200', category:'men', stock:'4'},
@@ -19,44 +18,27 @@ import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 
 const ItemDetailContainer = (match) =>{
-    
-    console.log(match)
     const [product, setProduct] = useState([])
     const params = useParams();
-    console.log(params)
+    const id = params.id;
     useEffect (() => {
         const db = firestore;
         const collection = db.collection('products');
-        const collection_doc = collection.doc(params.id);
-        console.log(params.id)
+        const collection_doc = collection.doc(id);
         const collection_doc_get = collection_doc.get();
-        collection_doc_get.then(res => {res.forEach(element => {
-            console.log(element)
-        });})
-        // collection_doc_get.then((res)=> {console.log(res)})
-        // const promesa = getProduct();
-        // promesa.then(json=>{
-        //     setProduct(json)
-        // })
-    },[])
-
-    // const getProduct = () =>{
-    //     const promesa = new Promise((res, rej) =>{
-
-    //         setTimeout(() => {
-    //             res(productsArray.filter(p=>p.id==params.id))
-    //         }, 2000)
-    //     })
-    //     return promesa;
-    // }
+        collection_doc_get.then(
+            res => {
+            const data = res.data()
+            const data_final = { id , ...data }
+            setProduct(data_final)
+            })
+    },[id])
 
     return(
-        product.map(product=>{
-            return(
+
             <ItemDetail product={product}/>
-            )
-        })
-    )
+            
+        )
 }
 
 export default ItemDetailContainer;

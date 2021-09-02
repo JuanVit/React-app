@@ -5,11 +5,10 @@ import { context } from "../CartContext/CartContext";
 const CartWidget = () => {
     
 const {cart} = useContext(context)
-console.log(cart)
 return(
 
     <Link to="/cart">
-    <i class="fas fa-shopping-cart"></i>
+    <i className="fas fa-shopping-cart"></i>
     {cart.length ? cart.length : null}
     </Link>
 )

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList'
-import './ItemListContainer.css'
+import './ItemListContainer.scss'
 import { useParams } from 'react-router';
 import { firestore } from '../../Firebase';
 
@@ -10,7 +10,6 @@ const ItemListContainer = () =>{
     const [products, setProducts] = useState([])
     useEffect (() => {
         const db = firestore
-        console.log(params.category)
         const collection = db.collection('products');
         const products = []
         
