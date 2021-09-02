@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from 'react';
 import './SideNavBar.scss';
 import { IconContext } from 'react-icons';
+import CartWidget from '../CartWidget/CartWidget';
 
 const SideNavBar = () =>  {
         const [sideBar ,setSideBar] = useState(false)
@@ -19,6 +20,7 @@ const SideNavBar = () =>  {
                 <Link to='#' className='menuBars' onClick={showSideBar}>
                 <FaIcons.FaBars/>
                 </Link>
+                <CartWidget />
             </div>
             <nav className={sideBar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSideBar}>
