@@ -7,8 +7,8 @@ const CartItem = ({product}) =>{
 
     return(
             <div className='cartItemBox'>
-                {product.product.name} x {product.amount} - ${product.product.price * product.amount}
-                <p>{product.amount}</p>
+                <img  src={product.product.img} alt={product.product.name} width='250' height='300' />
+                {product.product.name} x {product.amount} - ${(product.product.price * product.amount).toFixed(3)}
                 <button onClick={()=>removeProduct(product)}>borrar</button>
             </div>  
     )
