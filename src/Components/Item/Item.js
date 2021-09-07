@@ -10,7 +10,7 @@ const Item = ({product}, {key}) => {
             <div className="item-bottom"> 
                 <h2>{product.name}</h2>
                 <p>$ {product.price}</p>
-                <Link to={`/item/${product.id}`}><button className="item-button">View</button></Link>
+                <Link to={`/item/${product.id}`}><button className="item-button">Comprar</button></Link>
             </div>
         </div>
     )

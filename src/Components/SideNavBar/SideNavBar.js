@@ -1,4 +1,4 @@
-import * as FaIcons from 'react-icons/fa';
+
 import * as AiIcons from 'react-icons/ai';
 import SideBarInfo from '../SideBarInfo/SideBarInfo';
 import { Link } from "react-router-dom";
@@ -15,11 +15,12 @@ const SideNavBar = () =>  {
 
         return(
         <>
-        <IconContext.Provider value={{color:'white'}}>
+        <IconContext.Provider value={{color:'black', size:'20px'}}>
             <div className='sideNavBar'>
                 <Link to='#' className='menuBars' onClick={showSideBar}>
-                <FaIcons.FaBars/>
+                <AiIcons.AiOutlineBars />
                 </Link>
+                <h1>Ship Market</h1>
                 <CartWidget />
             </div>
             <nav className={sideBar ? 'nav-menu active' : 'nav-menu'}>
@@ -33,7 +34,6 @@ const SideNavBar = () =>  {
                         return(
                             <li key={index} className={item.cName}>
                                 <Link to={item.path}>
-                                    {item.icon}
                                     <span>{item.title}</span>
                                 </Link>
                             </li>

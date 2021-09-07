@@ -1,9 +1,12 @@
 import './Header.scss'
-import Nav from "../Nav/Nav"
-const Header = () =>
+import SideNavBar from '../SideNavBar/SideNavBar';
+const Header = () =>{
+        return(
         <header>
-                <Nav/>
+                <SideNavBar />
         </header>
+        )
+        }
 
 
 export default Header;

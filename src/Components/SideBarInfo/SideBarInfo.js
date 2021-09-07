@@ -1,29 +1,23 @@
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
+
 
 const SideBarInfo = [
     {
-        title: 'Home', 
-        icon: <AiIcons.AiFillHome />, 
+        title: 'Inicio', 
         path: '/',
         cName: 'nav-text'
     },
     {
-        title: 'Men', 
-        icon: <IoIcons.IoMdMan />, 
-        path: '/category/men',
+        title: 'Camperas', 
+        path: '/category/camperas',
         cName: 'nav-text'
     },
     {
-        title: 'Woman', 
-        icon: <IoIcons.IoMdWoman/>, 
-        path: '/category/women',
+        title: 'Pantalones', 
+        path: '/category/pantalones',
         cName: 'nav-text'
     },
     {
         title: 'Kids', 
-        icon: <FaIcons.FaBaby />, 
         path: '/category/kids',
         cName: 'nav-text'
     }

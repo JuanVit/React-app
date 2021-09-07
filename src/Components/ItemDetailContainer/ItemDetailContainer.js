@@ -23,7 +23,7 @@ const ItemDetailContainer = (match) =>{
     const id = params.id;
     useEffect (() => {
         const db = firestore;
-        const collection = db.collection('products');
+        const collection = db.collection('items');
         const collection_doc = collection.doc(id);
         const collection_doc_get = collection_doc.get();
         collection_doc_get.then(
@@ -35,9 +35,9 @@ const ItemDetailContainer = (match) =>{
     },[id])
 
     return(
-
+        <main className='itemDetailMain'>
             <ItemDetail product={product}/>
-            
+        </main>    
         )
 }
 
