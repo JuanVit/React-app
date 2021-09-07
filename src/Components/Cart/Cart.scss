@@ -1,7 +1,15 @@
 .cartContainer{
     width: 100%;
-    text-align: center;
+    flex-direction: column;
     .cartList{
+        margin: 80px auto;
+    }
+    .total-price{
         display: flex;
+        justify-content: flex-end;
+        .total-table{
+            color: white;
+            background: black;
+        }
     }
 }
