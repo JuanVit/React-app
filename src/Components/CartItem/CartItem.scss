@@ -2,7 +2,11 @@
 //     width: 250px;
 //     border: black 1px solid;
 // }
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 table{
     width: 70%;
     margin: auto;
@@ -17,7 +21,13 @@ table{
         }
         div{
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            p{
+                padding: 5px;
+            }
+            // align-items: center;
+            // align-content: center;
         }
     }
     th{

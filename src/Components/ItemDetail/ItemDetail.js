@@ -24,9 +24,6 @@ const onAdd = (cantidad) =>{
 
                 return(
                 <section className='detailBox'>
-                    <h2 className='detailTitle'>
-                        Detalle Producto
-                    </h2>
                     <div className='productDetailBox'>                        
                         <div className='imgDetailContainer'>
                             <img src={product.img} alt='thumbnail' />

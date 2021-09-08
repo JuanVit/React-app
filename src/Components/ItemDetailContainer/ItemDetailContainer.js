@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router";
 import { firestore } from '../../Firebase';
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 // const productsArray = [
 //     {id:1, name:'Nike Revolution 5 Runinng De Hombre', img:'https://sporting.vteximg.com.br/arquivos/ids/202114-1000-1000/4BQ3204-002-00.jpg?v=637178231968030000', price: '10.200', category:'men', stock:'4'},
@@ -17,8 +18,9 @@ import { firestore } from '../../Firebase';
 // const productDetail =  {id:1, name:'Producto Uno', img:'imagen', price: 3000}
 
 
-const ItemDetailContainer = (match) =>{
+const ItemDetailContainer = () =>{
     const [product, setProduct] = useState([])
+    const [loading, setLoading] = useState(true)
     const params = useParams();
     const id = params.id;
     useEffect (() => {
@@ -28,6 +30,7 @@ const ItemDetailContainer = (match) =>{
         const collection_doc_get = collection_doc.get();
         collection_doc_get.then(
             res => {
+                setLoading(false)
             const data = res.data()
             const data_final = { id , ...data }
             setProduct(data_final)
@@ -35,9 +38,13 @@ const ItemDetailContainer = (match) =>{
     },[id])
 
     return(
-        <main className='itemDetailMain'>
-            <ItemDetail product={product}/>
-        </main>    
+        <>
+        {loading ? <LoadingSpinner />
+        :<main className='itemDetailMain'>
+        <ItemDetail product={product}/>
+        </main>
+        }
+        </>
         )
 }
 

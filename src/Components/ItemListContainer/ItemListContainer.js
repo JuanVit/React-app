@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.scss'
 import { useParams } from 'react-router';
 import { firestore } from '../../Firebase';
-import { PacmanLoader } from "react-spinners";
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 
 const Banner = () =>{
@@ -68,7 +68,7 @@ const ItemListContainer = () =>{
         {products.length ?
         <ItemList products={products} className={params.category ? 'productListCategory' : null} />
         :
-        <PacmanLoader/>
+        <LoadingSpinner/>
         }
         </main>
     )

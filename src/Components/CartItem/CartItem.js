@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { context } from "../CartContext/CartContext";
 import './CartItem.scss'
+import * as BoxIcons from 'react-icons/bi'
 
 const CartItem = ({product}) =>{
     const { removeProduct} = useContext(context)
@@ -16,9 +17,15 @@ const CartItem = ({product}) =>{
                     <td>
                         <div className='cart-info'>
                             <img src={product.product.img} alt='información producto' />
-                            <div>
+                            <div className='cart-info-text'>
                                 <p>
                                     {product.product.name.substring(0, 15)}
+                                </p>
+                                <p>
+                                    $ {product.product.price}
+                                </p>
+                                <p onClick={() => removeProduct(product)}>
+                                    <BoxIcons.BiTrash color='#990000' size='25px' cursor='pointer'/>
                                 </p>
                             </div>
                         </div>
