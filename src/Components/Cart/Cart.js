@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { context } from "../CartContext/CartContext";
 import CartItem from "../CartItem/CartItem";
-import Form from "../Form/Form";
+// import Form from "../Form/Form";
 import { Link } from "react-router-dom";
 import './Cart.scss';
 
@@ -50,7 +50,7 @@ const Cart = () => {
             </div>
             {/* <div className='total-price'>Total: $ {totalPrice.toFixed(3)}</div> */}
             <button onClick={()=>clear()}>Vaciar el Carrito</button>
-            <Form />
+            <button><Link to='/form'>Comprar</Link></button>
             
         </section>
     )

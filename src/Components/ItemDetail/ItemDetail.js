@@ -33,9 +33,9 @@ const onAdd = (cantidad) =>{
                                 {product.name}
                             </p>
                             <p className='priceDetail'>
-                                Precio: $ {product.price}
+                                $ {product.price}
                             </p>
-                            {show ? <ItemCount stock={product.stock} initial={product.stock>=1 ? 1 : 0} onAdd={onAdd}/> : <><p>Cantidad elegida {amount} </p><Link to='/Cart'><button>Finalizar compra</button></Link></>}
+                            {show ? <ItemCount stock={product.stock} initial={product.stock>=1 ? 1 : 0} onAdd={onAdd}/> : <><p>Cantidad elegida {amount} </p><Link to='/Cart'><button>Ir al Carrito</button></Link></>}
                         </div>
                     </div>
                     <p className='productDetailDescription'>

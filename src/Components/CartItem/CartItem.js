@@ -7,12 +7,6 @@ const CartItem = ({product}) =>{
     const { removeProduct} = useContext(context)
 
     return(
-            // <div className='cartItemBox'>
-            //     <img  src={product.product.img} alt={product.product.name} width='250' height='300' />
-            //     {product.product.name} x {product.amount} - ${(product.product.price * product.amount).toFixed(3)}
-            //     <button onClick={()=>removeProduct(product)}>borrar</button>
-            // </div>  
-                
                 <tr>
                     <td>
                         <div className='cart-info'>
@@ -24,9 +18,9 @@ const CartItem = ({product}) =>{
                                 <p>
                                     $ {product.product.price}
                                 </p>
-                                <p onClick={() => removeProduct(product)}>
-                                    <BoxIcons.BiTrash color='#990000' size='25px' cursor='pointer'/>
-                                </p>
+                                <span>
+                                <BoxIcons.BiTrash onClick={() => removeProduct(product)} color='#990000' size='25px' cursor='pointer'/>
+                                </span>
                             </div>
                         </div>
                     </td>
