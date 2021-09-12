@@ -1,7 +1,7 @@
 import './Item.scss'
 import { Link } from 'react-router-dom';
 
-const Item = ({product}, {key}) => {
+const Item = ({product}) => {
     return (
         <div className='item-box'>
             <div className="item-img-container">

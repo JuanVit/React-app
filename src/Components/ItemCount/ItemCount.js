@@ -4,7 +4,7 @@ import * as AiIcons from 'react-icons/ai'
 const ItemCount = ({stock, initial, onAdd}) =>{
 
     const [numberItem, setItem] = useState(initial);
-
+    console.log(initial)
     const sumar = () => {
     if(numberItem < stock){
         setItem (numberItem + 1)
@@ -16,9 +16,6 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     const restar = () => {
         if(numberItem > 0){
             setItem (numberItem - 1)
-        }
-        else{
-            alert('Producto eliminado del carrito')
         }
     }
         const confirmar = () =>{
@@ -35,7 +32,7 @@ const ItemCount = ({stock, initial, onAdd}) =>{
             <AiIcons.AiOutlinePlus onClick={sumar} cursor='pointer' color='#A95E47' />
         </div>  
         <div>
-            <button onClick={confirmar}>Agregar al Carrito</button>
+            {numberItem  ? <button  onClick={confirmar}>Agregar al Carrito</button> : null}
         </div>  
         </>
     )

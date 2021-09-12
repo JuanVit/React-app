@@ -35,15 +35,9 @@ const onAdd = (cantidad) =>{
                             <p className='priceDetail'>
                                 $ {product.price}
                             </p>
-                            {show ? <ItemCount stock={product.stock} initial={product.stock>=1 ? 1 : 0} onAdd={onAdd}/> : <><p>Cantidad elegida {amount} </p><Link to='/Cart'><button>Ir al Carrito</button></Link></>}
+                            {show ? <ItemCount stock={product.stock} initial={1} onAdd={onAdd}/> : <><p>Cantidad elegida {amount} </p><Link to='/Cart'><button>Ir al Carrito</button></Link></>}
                         </div>
                     </div>
-                    <p className='productDetailDescription'>
-                        Las zapatillas Nike Air Max Oketo están confeccionadas con el logotipo de Swoosh propio de la marca en uno de sus laterales y 
-                        tienen una plantila ligeramente acolchada
-                        , una unidad Max Air para mayor comodidad y una suela exterior con diseño de gofres.
-                        Su suela de goma te proporciona la tracción necesaria para usarla todo el día.
-                    </p>
                 </section>
                 )
             }
