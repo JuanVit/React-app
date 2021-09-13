@@ -5,7 +5,6 @@ import * as AiIcons from 'react-icons/ai'
 const ItemCount = ({stock, initial, onAdd}) =>{
 
     const [numberItem, setItem] = useState(initial);
-    console.log(initial)
     const sumar = () => {
     if(numberItem < stock){
         setItem (numberItem + 1)

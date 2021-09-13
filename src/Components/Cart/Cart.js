@@ -21,19 +21,20 @@ const Cart = () => {
 
     if(cart.length){
         return ( 
-        <section className='cartContainer'>
-            <div className='cartList'>
+        <section className='cart-container'>
+            <div className='cart-list'>
                 <table>
                 <tbody>
                 <tr>
                     <th>Producto</th>
                     <th>Cantidad</th>
                     <th>Subtotal</th>
+                    <th></th>
                 </tr>
-                </tbody>
                 {cart.map(product =>
                 <CartItem product={product} key={product.product.id} />
                 )}
+                </tbody>
                 </table>
                 <div className='total-price'>
                     <table className='total-table'>
@@ -58,10 +59,12 @@ const Cart = () => {
     )
 } else{
         return(
-            <section className="cartContainer">
+            <section className="cart-empty-container">
+                <h2>¡Ups!</h2>
                 <p>
                     Tu carrito está vacío.
                 </p>
+                <p>¿No sabes que comprar? ¡Miles de productos te esperan ! </p>
                 <Link to='/'><button>Seguir Comprando</button></Link>
             </section>
         )

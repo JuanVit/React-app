@@ -52,3 +52,18 @@
         }
     }
 }
+
+@media only screen and (max-width:700px){
+    .item-box{
+        width: 200px;
+        height: 300px;
+        .item-bottom{
+            p{
+                font-size: 1.2rem;
+            }
+            .item-button{
+                width: 50%;
+            }
+        }
+    }
+}

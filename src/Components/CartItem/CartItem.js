@@ -18,14 +18,14 @@ const CartItem = ({product}) =>{
                                 <p>
                                     $ {product.product.price}
                                 </p>
-                                <span>
-                                <BoxIcons.BiTrash onClick={() => removeProduct(product)} color='#990000' size='25px' cursor='pointer'/>
-                                </span>
                             </div>
                         </div>
                     </td>
                     <td>{product.amount}</td>
                     <td>${(product.product.price * product.amount).toFixed(3)}</td>
+                    <td>
+                        <BoxIcons.BiTrash onClick={() => removeProduct(product)} color='#990000' size='25px' cursor='pointer' />
+                    </td>
                 </tr>
                 
                 
