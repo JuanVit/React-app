@@ -50,9 +50,10 @@ const Cart = () => {
                     </table>
                 </div>
             </div>
-            <button onClick={()=>clear()}>Vaciar el Carrito</button>
-            <button><Link to='/form'>Comprar</Link></button>
-            
+            <div className='cart-options'>
+                <button onClick={()=>clear()}>Vaciar el Carrito</button>
+                <Link to='/form'><button>Comprar</button></Link>
+            </div>
         </section>
     )
 } else{

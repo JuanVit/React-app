@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ItemCount.scss';
 import * as AiIcons from 'react-icons/ai'
+
 const ItemCount = ({stock, initial, onAdd}) =>{
 
     const [numberItem, setItem] = useState(initial);
@@ -8,9 +9,6 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     const sumar = () => {
     if(numberItem < stock){
         setItem (numberItem + 1)
-    }
-    else{
-        alert('No hay Stock')
     }
     }
     const restar = () => {
@@ -32,7 +30,7 @@ const ItemCount = ({stock, initial, onAdd}) =>{
             <AiIcons.AiOutlinePlus onClick={sumar} cursor='pointer' color='#A95E47' />
         </div>  
         <div>
-            {numberItem  ? <button  onClick={confirmar}>Agregar al Carrito</button> : null}
+            {numberItem > 0 ? <button  onClick={confirmar}>Agregar al Carrito</button> : <p>Introduzca una cantidad válida</p>}
         </div>  
         </>
     )

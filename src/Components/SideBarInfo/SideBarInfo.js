@@ -15,11 +15,6 @@ const SideBarInfo = [
         title: 'Pantalones', 
         path: '/category/pantalones',
         cName: 'nav-text'
-    },
-    {
-        title: 'Kids', 
-        path: '/category/kids',
-        cName: 'nav-text'
     }
 ]
 

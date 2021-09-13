@@ -26,41 +26,21 @@ const ItemListContainer = () =>{
 
     const params = useParams();
     const [products, setProducts] = useState([])
-    // const [isLoading, setIsLoading] = useState(true)
     useEffect (() => {
         const db = firestore
         const collection = db.collection('items');
         const fetchedProducts = []
         setProducts([]);
-        if(params.category){
-            const filter_query = collection.where("category", "==", `${params.category}`);
-            const query = filter_query.get();
-            query.then((res)=>{
-                res.forEach((document) => {
-                    const id= document.id;
-                    const data = document.data();
-                    const final_data = {id,...data};
-                    fetchedProducts.push(final_data);
-                    // setIsLoading(false);
-                })
-                setProducts([...fetchedProducts]);
-            })
-        } else{
-            const query = collection.get();
-            query.then((res)=>{
-                // setIsLoading(false)
+        let query = params.category ? collection.where("category", "==", `${params.category}`).get() : collection.get();
+        query.then((res)=>{
                 res.forEach((document) => {
                     const id= document.id;
                     const data = document.data();
                     const final_data = {id,...data};
                     fetchedProducts.push(final_data);
                 })
-                setProducts([...fetchedProducts]);
-            })
-        }       
-    } , [params.category])
-
-
+                setProducts([...fetchedProducts]); })
+    } , [params.category]) 
 
     return(
         <main className='main-home' >
