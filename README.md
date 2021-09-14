@@ -24,4 +24,5 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 ### ScreenShots
 
-![Home Principal](./Assets/readme-uno.jpeg)
+![Home Principal](https://github.com/JuanVit/React-app/blob/master/src/Assets/readme-uno.jpeg)
+![Item Detail](Assets/readme-dos.jpeg)
