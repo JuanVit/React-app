@@ -24,5 +24,6 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 ### ScreenShots
 
-![Home Principal](https://github.com/JuanVit/React-app/blob/master/src/Assets/readme-uno.jpeg)
-![Item Detail](Assets/readme-dos.jpeg)
+![Home Principal](https://github.com/JuanVit/React-app/blob/master/src/Assets/readme-uno.jpeg)  
+![Item Detail](https://github.com/JuanVit/React-app/blob/master/src/Assets/readme-dos.jpeg)  
+![Carrito de Compras](https://github.com/JuanVit/React-app/blob/master/src/Assets/readme-tres.jpeg)
