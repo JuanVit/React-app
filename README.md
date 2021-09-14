@@ -24,4 +24,4 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 ### ScreenShots
 
-(Assets/readme-uno.jpeg)
+(./Assets/readme-uno.jpeg)
