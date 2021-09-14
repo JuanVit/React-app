@@ -1,0 +1,21 @@
+footer{
+    height: 250px;
+    width: 100%;
+    background: rgb(36, 36, 36);
+    color: rgb(151, 151, 151);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .social{
+        width: 150px;
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .copyright{
+        padding-top: 50px;
+        p{
+            font-weight: bold;
+        }
+    }
+}

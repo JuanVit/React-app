@@ -3,6 +3,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router";
 import { firestore } from '../../Firebase';
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import './ItemDetailContainer.scss'
 
 const ItemDetailContainer = () =>{
     const [product, setProduct] = useState([])

@@ -29,13 +29,13 @@ const onAdd = (cantidad) =>{
                             <img src={product.img} alt='thumbnail' />
                         </div>
                         <div className='contentDetailContainer'>
-                            <p>
+                            <h2>
                                 {product.name}
-                            </p>
+                            </h2>
                             <p className='priceDetail'>
                                 $ {product.price}
                             </p>
-                            {show ? <ItemCount stock={product.stock} initial={1} onAdd={onAdd}/> : <><p>Cantidad elegida {amount} </p><Link to='/Cart'><button>Ir al Carrito</button></Link></>}
+                            {show ? <ItemCount stock={product.stock} initial={1} onAdd={onAdd}/> : <><p className='set-cantidad'>X {amount}</p><Link to='/Cart'><button className='go-cart-button'>Ir al Carrito</button></Link></>}
                         </div>
                     </div>
                 </section>

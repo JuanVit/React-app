@@ -4,11 +4,13 @@
     flex-wrap: wrap;
     width: 90%;
     margin: auto;
+    min-height: 1000px;
 }
 
 @media only screen and (max-width: 1020px){
     .item-list-container{
         width: 90%;
         margin: auto;
+        margin-bottom: 50px;
     }
 }

@@ -1,16 +1,26 @@
 .itemBtnContainer{
-    display: flex;
+    width: 100px;
+    height: 12%;
     justify-content: center;
+    display: flex;
     margin: 5px 0px;
-    border: black solid;
-    border-radius: 50px;
-    padding: 5px 10px;
+    border: rgb(65, 65, 65) solid 1px;
+    padding: 10px 15px;
     align-items: center;
-    p{
-        margin: 10px;
+    span{
+        font-weight: bold;
+        padding: 0px 10px;
     }
-    button{
-        padding: 15px;
-        border-radius: 50%;
-    }
+}
+.button-add-cart{
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: white;
+    background: black;
+    border: none;
+}
+.error-cantidad{
+    color: red;
+    margin: 5px 0px !important;
 }

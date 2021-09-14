@@ -24,12 +24,12 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     return(
         <>
         <div className='itemBtnContainer'>
-            <AiIcons.AiOutlineMinus onClick={restar} cursor='pointer' color='#A95E47'/>
-            <p>{numberItem}</p>
-            <AiIcons.AiOutlinePlus onClick={sumar} cursor='pointer' color='#A95E47' />
+            <AiIcons.AiOutlineMinus onClick={restar} cursor='pointer' color='#A95E47' size='20px'/>
+            <span>{numberItem}</span>
+            <AiIcons.AiOutlinePlus onClick={sumar} cursor='pointer' color='#A95E47' size='20px' />
         </div>  
         <div>
-            {numberItem > 0 ? <button  onClick={confirmar}>Agregar al Carrito</button> : <p>Introduzca una cantidad válida</p>}
+            {numberItem > 0 ? <button className='button-add-cart' onClick={confirmar}>Agregar</button> : <p className='error-cantidad'>* Introduzca una cantidad válida</p>}
         </div>  
         </>
     )

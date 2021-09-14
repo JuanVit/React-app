@@ -3,6 +3,7 @@ import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./Components/Cart/Cart";
 import Form from "./Components/Form/Form";
+import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CustomProvider from "./Components/CartContext/CartContext";
 
@@ -18,6 +19,7 @@ const App = () =>{
                                 <Route path='/cart' component={Cart}/>
                                 <Route path='/Form' component={Form} />
                         </Switch>
+                        <Footer/>
                 </BrowserRouter>
         </CustomProvider>
         )

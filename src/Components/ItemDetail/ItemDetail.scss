@@ -1,14 +1,11 @@
 .detailBox{
-    width: 70%;
-    height:60%;
+    width: 60%;
+    height:100%;
     margin:150px auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 1px solid black;    
     .productDetailBox{
         display: flex;
-        justify-content: center;
         width: 80%;
         margin: 0% auto;
         .imgDetailContainer{
@@ -19,11 +16,12 @@
             }
         }
         .contentDetailContainer{
-            width: 40%;
+            margin-left: 5%;
+            width: 50%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            margin-top: 5%;
+            // justify-content: center;
             p{
                 width:50%;
                 margin:10% auto;
@@ -31,6 +29,18 @@
             .priceDetail{
                 font-size: 1.2rem;
                 font-weight: bold;
+                margin: 15px 0px;
+            }
+            .go-cart-button{
+                font-weight: bold;
+                cursor: pointer;
+                padding: 10px 15px;
+                color: white;
+                background: black;
+                border: none;
+            }
+            .set-cantidad{
+                margin: 5px 0px;
             }
         }
     }
