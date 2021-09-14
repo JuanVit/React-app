@@ -51,10 +51,19 @@
     }
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 700px){
     .detailBox{
         width: 90%;
         margin: 80px auto;
+        .productDetailBox{
+            flex-direction: column;
+            .imgDetailContainer{
+                width: 100%;
+            }
+            .contentDetailContainer{
+                margin: 0;
+                width: 100%;
+            }
+        }
     }
 }
-
