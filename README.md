@@ -23,3 +23,5 @@ Se abre una pestaña del navegador en el puerto 3000:
 #### En caso de que no se abra automáticamente, copiar y pegar esta ruta en el navegador: ```http://localhost:3000```
 
 ### ScreenShots
+
+(Assets/readme-uno.jpeg)
