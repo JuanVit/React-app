@@ -76,7 +76,7 @@ const Form = () =>{
         <h2>¡Gracias por elegirnos!</h2>
         <h4>La compra se realizó exitosamente.</h4>
         <div className='gif-success'>
-        <iframe title='iframe-buy' src="https://giphy.com/embed/3osxYdXvsGw6wT5lIY" width="100%" height="250" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <iframe title='iframe-buy' src="https://giphy.com/embed/3osxYdXvsGw6wT5lIY" width="100%" height="250" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
         </div>
         <h4>
             El ID de tu compra es: <span>{order}</span>
