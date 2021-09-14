@@ -27,3 +27,7 @@ Se abre una pestaña del navegador en el puerto 3000:
 ![Home Principal](https://github.com/JuanVit/React-app/blob/master/src/Assets/readme-uno.jpeg)  
 ![Item Detail](https://github.com/JuanVit/React-app/blob/master/src/Assets/readme-dos.jpeg)  
 ![Carrito de Compras](https://github.com/JuanVit/React-app/blob/master/src/Assets/readme-tres.jpeg)
+
+### Flujo de Compra 
+
+![Gif flujo de compra](https://github.com/JuanVit/React-app/blob/master/src/Assets/Animation.gif)
